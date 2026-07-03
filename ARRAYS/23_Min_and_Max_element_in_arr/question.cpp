@@ -13,7 +13,7 @@ vector<int> getMinMax(vector<int> &arr)        //Time Complexity : O(n)
             mini = arr[i];
 
         if (arr[i] > maxi)
-            maxi = arr[i];
+            maxi = arr[i]; //
     }
 
     return {mini, maxi};
