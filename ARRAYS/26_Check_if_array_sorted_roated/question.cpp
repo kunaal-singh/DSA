@@ -24,7 +24,7 @@ bool check(vector<int>& nums)
         count++;
     }
 
-    // If there is at most one decreasing point, return true
+    // If there is at most one decreasing point, return 
     return count <= 1;
 }
 
