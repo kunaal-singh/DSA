@@ -36,7 +36,7 @@ int main()
 
     vector<int> arr(n);
 
-    cout << "Enter " << n << " elements (0, 1, or 2): ";
+    cout << "Enter " << n << " elements (0, 1, or 2): "; //
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
