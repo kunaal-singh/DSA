@@ -32,5 +32,5 @@ int main() {
 
     cout << obj.findMinDiff(arr, m);
 
-    return 0; //returns
+    return 0; //returns result
 }
