@@ -2,55 +2,46 @@
 #include <vector>
 using namespace std;
 
-void sortColors(vector<int>& arr)
-{
+void sortColors(vector<int>& nums) {
     int low = 0;
     int mid = 0;
-    int high = arr.size() - 1;
+    int high = nums.size() - 1;
 
-    while (mid <= high)
-    {
-        if (arr[mid] == 0)
-        {
-            swap(arr[low], arr[mid]);
+    while (mid <= high) {
+        if (nums[mid] == 0) {
+            swap(nums[low], nums[mid]);
             low++;
             mid++;
         }
-        else if (arr[mid] == 1)
-        {
+        else if (nums[mid] == 1) {
             mid++;
         }
-        else // arr[mid] == 2
-        {
-            swap(arr[mid], arr[high]);
+        else {
+            swap(nums[mid], nums[high]);
             high--;
         }
     }
 }
 
-int main()
-{
+int main() {
     int n;
-    cout << "Enter size of array: ";
+
+    cout << "Enter the number of elements: ";
     cin >> n;
 
-    vector<int> arr(n);
+    vector<int> nums(n);
 
-    cout << "Enter " << n << " elements (0, 1, or 2): "; //
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
+    cout << "Enter the elements (only 0, 1, and 2): ";
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
     }
 
-    sortColors(arr);
+    sortColors(nums);
 
-    cout << "Sorted Array: ";
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
+    cout << "Sorted array: ";
+    for (int x : nums) {
+        cout << x << " ";
     }
-
-    cout << endl;
 
     return 0;
 }
